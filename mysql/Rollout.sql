@@ -1,5 +1,5 @@
 CREATE TABLE `Kafkaconfig` (
-  `conf_id` integer,
+  `conf_id` integer PRIMARY KEY,
   `topic_name` varchar(255),
   `database_id` integer,
   `table_name` varchar(50),
@@ -12,7 +12,7 @@ CREATE TABLE `Kafkaconfig` (
 );
 
 CREATE TABLE `databaseconfig` (
-  `database_id` integer,
+  `database_id` integer PRIMARY KEY,
   `database_type` varchar(255),
   `database_host` varchar(50),
   `database_port` varchar(50),
@@ -22,7 +22,7 @@ CREATE TABLE `databaseconfig` (
 );
 
 CREATE TABLE `processstatus` (
-  `id` integer,
+  `id` integer PRIMARY KEY,
   `process_id` integer,
   `active_status` varchar(1)
 );
